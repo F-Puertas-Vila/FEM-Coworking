@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "2296c246-04e3-4ec5-8ea1-4eff59a9d959",
+		"name": "Usuaris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LlistaUsuaris",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuaris/codiAcces",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuaris",
+						"codiAcces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"anEmail@email.com\",\r\n    \"contrasenya\":\"1234\",\r\n    \"rol\":\"CLIENT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/registre",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"anEmail@email.com\",\r\n    \"contrasenya\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    contrasenya:\"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/logout/codiAcces",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout",
+						"codiAcces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Canvi contrasenya",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contrasenya\":\"000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/canviarContrasenya/codiAcces",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"canviarContrasenya",
+						"codiAcces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Baixa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idUsuari\":\"idUsuari\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/baixa/codiAcces",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"baixa",
+						"codiAcces"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
